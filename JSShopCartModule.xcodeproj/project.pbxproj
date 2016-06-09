@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		546CC90C1D08FACB0079337B /* JSCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546CC90B1D08FACB0079337B /* JSCartViewController.m */; };
+		546CC90F1D08FADC0079337B /* JSCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 546CC90E1D08FADC0079337B /* JSCartModel.m */; };
+		546CC9131D08FB150079337B /* JSCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 546CC9111D08FB150079337B /* JSCartCell.m */; };
+		546CC9141D08FB150079337B /* JSCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546CC9121D08FB150079337B /* JSCartCell.xib */; };
+		546CC9171D08FB260079337B /* JSCartUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 546CC9161D08FB260079337B /* JSCartUIService.m */; };
+		546CC91A1D08FB3B0079337B /* JSCartViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 546CC9191D08FB3B0079337B /* JSCartViewModel.m */; };
+		546D9CD31D083D2A00793CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 546D9CD21D083D2A00793CA9 /* main.m */; };
+		546D9CDC1D083D2A00793CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546D9CDA1D083D2A00793CA9 /* Main.storyboard */; };
+		546D9CDE1D083D2A00793CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546D9CDD1D083D2A00793CA9 /* Assets.xcassets */; };
+		546D9CE11D083D2A00793CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546D9CDF1D083D2A00793CA9 /* LaunchScreen.storyboard */; };
+		546D9CEB1D083DB900793CA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 546D9CEA1D083DB900793CA9 /* AppDelegate.m */; };
+		54BBF2C21D090E240021B5D9 /* JSNummberCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BBF2C11D090E240021B5D9 /* JSNummberCount.m */; };
+		54BBF2C51D091D480021B5D9 /* JSCartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BBF2C41D091D480021B5D9 /* JSCartHeaderView.m */; };
+		54BBF2C81D091D590021B5D9 /* JSCartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BBF2C71D091D590021B5D9 /* JSCartFooterView.m */; };
+		54BBF2CB1D092AC50021B5D9 /* JSCartBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BBF2CA1D092AC50021B5D9 /* JSCartBar.m */; };
+		E4EEA401FE7F8E493051159A /* Pods_JSShopCartModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAFDA536D75BBACBF78A759 /* Pods_JSShopCartModule.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		546CC90A1D08FACB0079337B /* JSCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartViewController.h; sourceTree = "<group>"; };
+		546CC90B1D08FACB0079337B /* JSCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartViewController.m; sourceTree = "<group>"; };
+		546CC90D1D08FADC0079337B /* JSCartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartModel.h; sourceTree = "<group>"; };
+		546CC90E1D08FADC0079337B /* JSCartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartModel.m; sourceTree = "<group>"; };
+		546CC9101D08FB150079337B /* JSCartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartCell.h; sourceTree = "<group>"; };
+		546CC9111D08FB150079337B /* JSCartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartCell.m; sourceTree = "<group>"; };
+		546CC9121D08FB150079337B /* JSCartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSCartCell.xib; sourceTree = "<group>"; };
+		546CC9151D08FB260079337B /* JSCartUIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartUIService.h; sourceTree = "<group>"; };
+		546CC9161D08FB260079337B /* JSCartUIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartUIService.m; sourceTree = "<group>"; };
+		546CC9181D08FB3B0079337B /* JSCartViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartViewModel.h; sourceTree = "<group>"; };
+		546CC9191D08FB3B0079337B /* JSCartViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartViewModel.m; sourceTree = "<group>"; };
+		546D9CCE1D083D2A00793CA9 /* JSShopCartModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSShopCartModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		546D9CD21D083D2A00793CA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		546D9CDB1D083D2A00793CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		546D9CDD1D083D2A00793CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		546D9CE01D083D2A00793CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		546D9CE21D083D2A00793CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546D9CE91D083DB900793CA9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		546D9CEA1D083DB900793CA9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		54BBF2BF1D090AFD0021B5D9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		54BBF2C01D090E240021B5D9 /* JSNummberCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNummberCount.h; sourceTree = "<group>"; };
+		54BBF2C11D090E240021B5D9 /* JSNummberCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNummberCount.m; sourceTree = "<group>"; };
+		54BBF2C31D091D480021B5D9 /* JSCartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartHeaderView.h; sourceTree = "<group>"; };
+		54BBF2C41D091D480021B5D9 /* JSCartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartHeaderView.m; sourceTree = "<group>"; };
+		54BBF2C61D091D590021B5D9 /* JSCartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartFooterView.h; sourceTree = "<group>"; };
+		54BBF2C71D091D590021B5D9 /* JSCartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartFooterView.m; sourceTree = "<group>"; };
+		54BBF2C91D092AC50021B5D9 /* JSCartBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartBar.h; sourceTree = "<group>"; };
+		54BBF2CA1D092AC50021B5D9 /* JSCartBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartBar.m; sourceTree = "<group>"; };
+		5BAFDA536D75BBACBF78A759 /* Pods_JSShopCartModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSShopCartModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0403353655BA6742A232FB5 /* Pods-JSShopCartModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSShopCartModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSShopCartModule/Pods-JSShopCartModule.debug.xcconfig"; sourceTree = "<group>"; };
+		CFE8CBF8A65DFC2A0AE184C9 /* Pods-JSShopCartModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSShopCartModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSShopCartModule/Pods-JSShopCartModule.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		546D9CCB1D083D2A00793CA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEA401FE7F8E493051159A /* Pods_JSShopCartModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18355B79C6D4B4AD9E6F40CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFDA536D75BBACBF78A759 /* Pods_JSShopCartModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A4DF452446F086E94072B36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0403353655BA6742A232FB5 /* Pods-JSShopCartModule.debug.xcconfig */,
+				CFE8CBF8A65DFC2A0AE184C9 /* Pods-JSShopCartModule.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		546D9CC51D083D2A00793CA9 = {
+			isa = PBXGroup;
+			children = (
+				546D9CD01D083D2A00793CA9 /* JSShopCartModule */,
+				546D9CCF1D083D2A00793CA9 /* Products */,
+				4A4DF452446F086E94072B36 /* Pods */,
+				18355B79C6D4B4AD9E6F40CB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		546D9CCF1D083D2A00793CA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				546D9CCE1D083D2A00793CA9 /* JSShopCartModule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		546D9CD01D083D2A00793CA9 /* JSShopCartModule */ = {
+			isa = PBXGroup;
+			children = (
+				548CCB391D08EF5900D281C1 /* Libs */,
+				546D9CE81D083DB900793CA9 /* Class */,
+				546D9CD11D083D2A00793CA9 /* Supporting Files */,
+			);
+			path = JSShopCartModule;
+			sourceTree = "<group>";
+		};
+		546D9CD11D083D2A00793CA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				546D9CDA1D083D2A00793CA9 /* Main.storyboard */,
+				546D9CDD1D083D2A00793CA9 /* Assets.xcassets */,
+				546D9CE21D083D2A00793CA9 /* Info.plist */,
+				546D9CDF1D083D2A00793CA9 /* LaunchScreen.storyboard */,
+				546D9CD21D083D2A00793CA9 /* main.m */,
+				54BBF2BF1D090AFD0021B5D9 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		546D9CE81D083DB900793CA9 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				546D9CE91D083DB900793CA9 /* AppDelegate.h */,
+				546D9CEA1D083DB900793CA9 /* AppDelegate.m */,
+				546D9CEC1D083DF700793CA9 /* ShopCart */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		546D9CEC1D083DF700793CA9 /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+				548CCB3C1D08EF6000D281C1 /* ViewController */,
+				548CCB3A1D08EF6000D281C1 /* Model */,
+				548CCB3B1D08EF6000D281C1 /* View */,
+				548CCB3D1D08EF6000D281C1 /* ViewModel */,
+			);
+			path = ShopCart;
+			sourceTree = "<group>";
+		};
+		548CCB391D08EF5900D281C1 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libs;
+			path = Class/Libs;
+			sourceTree = "<group>";
+		};
+		548CCB3A1D08EF6000D281C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				546CC90D1D08FADC0079337B /* JSCartModel.h */,
+				546CC90E1D08FADC0079337B /* JSCartModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		548CCB3B1D08EF6000D281C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				546CC9101D08FB150079337B /* JSCartCell.h */,
+				546CC9111D08FB150079337B /* JSCartCell.m */,
+				546CC9121D08FB150079337B /* JSCartCell.xib */,
+				54BBF2C01D090E240021B5D9 /* JSNummberCount.h */,
+				54BBF2C11D090E240021B5D9 /* JSNummberCount.m */,
+				54BBF2C31D091D480021B5D9 /* JSCartHeaderView.h */,
+				54BBF2C41D091D480021B5D9 /* JSCartHeaderView.m */,
+				54BBF2C61D091D590021B5D9 /* JSCartFooterView.h */,
+				54BBF2C71D091D590021B5D9 /* JSCartFooterView.m */,
+				54BBF2C91D092AC50021B5D9 /* JSCartBar.h */,
+				54BBF2CA1D092AC50021B5D9 /* JSCartBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		548CCB3C1D08EF6000D281C1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				546CC90A1D08FACB0079337B /* JSCartViewController.h */,
+				546CC90B1D08FACB0079337B /* JSCartViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		548CCB3D1D08EF6000D281C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				546CC9151D08FB260079337B /* JSCartUIService.h */,
+				546CC9161D08FB260079337B /* JSCartUIService.m */,
+				546CC9181D08FB3B0079337B /* JSCartViewModel.h */,
+				546CC9191D08FB3B0079337B /* JSCartViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		546D9CCD1D083D2A00793CA9 /* JSShopCartModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546D9CE51D083D2A00793CA9 /* Build configuration list for PBXNativeTarget "JSShopCartModule" */;
+			buildPhases = (
+				CC60AC8CF2439877A25A5CA0 /* 📦 Check Pods Manifest.lock */,
+				546D9CCA1D083D2A00793CA9 /* Sources */,
+				546D9CCB1D083D2A00793CA9 /* Frameworks */,
+				546D9CCC1D083D2A00793CA9 /* Resources */,
+				BC48AD7DC6657B7E318EFA07 /* 📦 Embed Pods Frameworks */,
+				DAFDB4F8DBB01BEEF733605E /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSShopCartModule;
+			productName = JSShopCartModule;
+			productReference = 546D9CCE1D083D2A00793CA9 /* JSShopCartModule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		546D9CC61D083D2A00793CA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "乔同新";
+				TargetAttributes = {
+					546D9CCD1D083D2A00793CA9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 546D9CC91D083D2A00793CA9 /* Build configuration list for PBXProject "JSShopCartModule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 546D9CC51D083D2A00793CA9;
+			productRefGroup = 546D9CCF1D083D2A00793CA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				546D9CCD1D083D2A00793CA9 /* JSShopCartModule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		546D9CCC1D083D2A00793CA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546D9CE11D083D2A00793CA9 /* LaunchScreen.storyboard in Resources */,
+				546D9CDE1D083D2A00793CA9 /* Assets.xcassets in Resources */,
+				546CC9141D08FB150079337B /* JSCartCell.xib in Resources */,
+				546D9CDC1D083D2A00793CA9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC48AD7DC6657B7E318EFA07 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSShopCartModule/Pods-JSShopCartModule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC60AC8CF2439877A25A5CA0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAFDB4F8DBB01BEEF733605E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSShopCartModule/Pods-JSShopCartModule-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		546D9CCA1D083D2A00793CA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54BBF2C81D091D590021B5D9 /* JSCartFooterView.m in Sources */,
+				546CC9131D08FB150079337B /* JSCartCell.m in Sources */,
+				546CC90F1D08FADC0079337B /* JSCartModel.m in Sources */,
+				546CC90C1D08FACB0079337B /* JSCartViewController.m in Sources */,
+				546D9CEB1D083DB900793CA9 /* AppDelegate.m in Sources */,
+				546CC9171D08FB260079337B /* JSCartUIService.m in Sources */,
+				54BBF2C51D091D480021B5D9 /* JSCartHeaderView.m in Sources */,
+				546CC91A1D08FB3B0079337B /* JSCartViewModel.m in Sources */,
+				546D9CD31D083D2A00793CA9 /* main.m in Sources */,
+				54BBF2C21D090E240021B5D9 /* JSNummberCount.m in Sources */,
+				54BBF2CB1D092AC50021B5D9 /* JSCartBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		546D9CDA1D083D2A00793CA9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546D9CDB1D083D2A00793CA9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		546D9CDF1D083D2A00793CA9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546D9CE01D083D2A00793CA9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		546D9CE31D083D2A00793CA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		546D9CE41D083D2A00793CA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		546D9CE61D083D2A00793CA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0403353655BA6742A232FB5 /* Pods-JSShopCartModule.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JSShopCartModule/PrefixHeader.pch";
+				INFOPLIST_FILE = JSShopCartModule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"Result\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyd.JSShopCartModule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		546D9CE71D083D2A00793CA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE8CBF8A65DFC2A0AE184C9 /* Pods-JSShopCartModule.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JSShopCartModule/PrefixHeader.pch";
+				INFOPLIST_FILE = JSShopCartModule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"Result\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyd.JSShopCartModule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		546D9CC91D083D2A00793CA9 /* Build configuration list for PBXProject "JSShopCartModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546D9CE31D083D2A00793CA9 /* Debug */,
+				546D9CE41D083D2A00793CA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546D9CE51D083D2A00793CA9 /* Build configuration list for PBXNativeTarget "JSShopCartModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546D9CE61D083D2A00793CA9 /* Debug */,
+				546D9CE71D083D2A00793CA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 546D9CC61D083D2A00793CA9 /* Project object */;
+}
