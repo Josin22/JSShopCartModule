@@ -149,6 +149,7 @@
     
     [self.cartTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     
+    /*重新计算价格*/
     self.allPrices = [self getAllPrices];
 }
 
@@ -163,6 +164,7 @@
     
     [self.cartTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     
+    /*重新计算价格*/
     self.allPrices = [self getAllPrices];
 }
 
@@ -184,7 +186,8 @@
         [self.cartTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     }
     self.cartGoodsCount-=1;
-    
+    /*重新计算价格*/
+    self.allPrices = [self getAllPrices];
 }
 
 //选中删除
@@ -218,6 +221,8 @@
     [self.cartTableView reloadData];
     /*3 carbar 恢复默认*/
     self.allPrices = 0;
+    /*重新计算价格*/
+    self.allPrices = [self getAllPrices];
 }
 
 @end
