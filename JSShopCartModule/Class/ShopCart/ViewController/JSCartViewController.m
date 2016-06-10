@@ -13,7 +13,11 @@
 
 
 @interface JSCartViewController ()
-
+{
+    BOOL _isIdit;
+    UIBarButtonItem *_editItem;
+    UIBarButtonItem *_makeDataItem;
+}
 @property (nonatomic, strong) JSCartUIService *service;
 
 @property (nonatomic, strong) JSCartViewModel *viewModel;
@@ -30,14 +34,31 @@
     
     [super viewWillAppear:animated];
     
-    [self.viewModel getData];
-    [self.cartTableView reloadData];
+    [self getNewData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /*setting up*/
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.title = @"购物车";
+    /*eidit button*/
+    _isIdit = NO;
+    
+    _makeDataItem = [[UIBarButtonItem alloc] initWithTitle:@"新数据"
+                                                                     style:UIBarButtonItemStyleDone
+                                                                    target:self
+                                                                    action:@selector(makeNewData:)];
+    _makeDataItem.tintColor = [UIColor redColor];
+    self.navigationItem.leftBarButtonItem = _makeDataItem;
+    
+    _editItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑"
+                                                 style:UIBarButtonItemStyleDone
+                                                target:self
+                                                action:@selector(editClick:)];
+    _editItem.tintColor = XNColor(170, 170, 170, 1);
+    self.navigationItem.rightBarButtonItem = _editItem;
+    /*add view*/
     [self.view addSubview:self.cartTableView];
     [self.view addSubview:self.cartBar];
     
@@ -49,7 +70,7 @@
     }];
     //删除
     [[self.cartBar.deleteButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *x) {
-        
+        [self.viewModel deleteGoodsBySelect];
     }];
     //结算
     [[self.cartBar.balanceButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *x) {
@@ -64,6 +85,19 @@
     
     /* 全选 状态 */
     RAC(self.cartBar.selectAllButton,selected) = RACObserve(self.viewModel, isSelectAll);
+    
+    /* 购物车数量 */
+    [RACObserve(self.viewModel, cartGoodsCount) subscribeNext:^(NSNumber *x) {
+       STRONG
+        if(x.integerValue == 0){
+            _makeDataItem = nil;
+            self.title = [NSString stringWithFormat:@"购物车"];
+        } else {
+            self.title = [NSString stringWithFormat:@"购物车(%@)",x];
+        }
+        
+    }];
+    
 }
 
 
@@ -112,8 +146,31 @@
     
     if (!_cartBar) {
         _cartBar = [[JSCartBar alloc] initWithFrame:CGRectMake(0, XNWindowHeight-50, XNWindowWidth, 50)];
+        _cartBar.isNormalState = YES;
     }
     return _cartBar;
+}
+
+#pragma mark - method
+
+- (void)getNewData{
+    /**
+     *  获取数据
+     */
+    [self.viewModel getData];
+    [self.cartTableView reloadData];
+}
+
+- (void)editClick:(UIBarButtonItem *)item{
+    _isIdit = !_isIdit;
+    NSString *itemTitle = _isIdit == YES?@"完成":@"编辑";
+    _editItem.title = itemTitle;
+    self.cartBar.isNormalState = !_isIdit;
+}
+
+- (void)makeNewData:(UIBarButtonItem *)item{
+    
+    [self getNewData];
 }
 
 @end

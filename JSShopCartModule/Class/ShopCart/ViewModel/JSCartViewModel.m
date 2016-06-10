@@ -55,6 +55,7 @@
 - (void)getData{
     //数据个数
     NSInteger allCount = 20;
+    NSInteger allGoodsCount = 0;
     NSMutableArray *storeArray = [NSMutableArray arrayWithCapacity:allCount];
     NSMutableArray *shopSelectAarry = [NSMutableArray arrayWithCapacity:allCount];
     //创造店铺数据
@@ -64,25 +65,27 @@
         NSMutableArray *goodsArray = [NSMutableArray arrayWithCapacity:goodsCount];
         for (int x = 0; x<goodsCount; x++) {
             JSCartModel *cartModel = [[JSCartModel alloc] init];
-            cartModel.p_id = @"122115465400";
-            cartModel.p_price = [_goodsPriceArray[self.random] floatValue];
-            cartModel.p_name = [NSString stringWithFormat:@"%@这是一个很长很长的名字呀呀呀呀呀呀",@(x)];
-            cartModel.p_stock = 22;
-            cartModel.p_imageUrl = _goodsPicArray[self.random];
-            cartModel.p_quantity = [_goodsQuantityArray[self.random] integerValue];
+            cartModel.p_id         = @"122115465400";
+            cartModel.p_price      = [_goodsPriceArray[self.random] floatValue];
+            cartModel.p_name       = [NSString stringWithFormat:@"%@这是一个很长很长的名字呀呀呀呀呀呀",@(x)];
+            cartModel.p_stock      = 22;
+            cartModel.p_imageUrl   = _goodsPicArray[self.random];
+            cartModel.p_quantity   = [_goodsQuantityArray[self.random] integerValue];
             [goodsArray addObject:cartModel];
+            allGoodsCount++;
         }
         [storeArray addObject:goodsArray];
         [shopSelectAarry addObject:@(NO)];
     }
     self.cartData = storeArray;
     self.shopSelectArray = shopSelectAarry;
+    self.cartGoodsCount = allGoodsCount;
 }
 
 - (float)getAllPrices{
     
-    __block float allPrices = 0;
-    NSInteger shopCount = self.cartData.count;
+    __block float allPrices   = 0;
+    NSInteger shopCount       = self.cartData.count;
     NSInteger shopSelectCount = self.shopSelectArray.count;
     if (shopSelectCount == shopCount && shopCount!=0) {
         self.isSelectAll = YES;
@@ -128,12 +131,12 @@
 
 - (void)rowSelect:(BOOL)isSelect IndexPath:(NSIndexPath *)indexPath{
     
-    NSInteger section = indexPath.section;
-    NSInteger row = indexPath.row;
-    
+    NSInteger section          = indexPath.section;
+    NSInteger row              = indexPath.row;
+
     NSMutableArray *goodsArray = self.cartData[section];
-    NSInteger shopCount = goodsArray.count;
-    JSCartModel *model = goodsArray[row];
+    NSInteger shopCount        = goodsArray.count;
+    JSCartModel *model         = goodsArray[row];
     [model setValue:@(isSelect) forKey:@"isSelect"];
     //判断是都到达足够数量
     NSInteger isSelectShopCount = 0;
@@ -151,9 +154,9 @@
 
 - (void)rowChangeQuantity:(NSInteger)quantity indexPath:(NSIndexPath *)indexPath{
     
-    NSInteger section = indexPath.section;
-    NSInteger row = indexPath.row;
-    
+    NSInteger section  = indexPath.section;
+    NSInteger row      = indexPath.row;
+
     JSCartModel *model = self.cartData[section][row];
 
     [model setValue:@(quantity) forKey:@"p_quantity"];
@@ -161,6 +164,60 @@
     [self.cartTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     
     self.allPrices = [self getAllPrices];
+}
+
+//左滑删除商品
+- (void)deleteGoodsBySingleSlide:(NSIndexPath *)path{
+    
+    NSInteger section = path.section;
+    NSInteger row     = path.row;
+    
+    NSMutableArray *shopArray = self.cartData[section];
+    [shopArray removeObjectAtIndex:row];
+    if (shopArray.count == 0) {
+        /*1 删除数据*/
+        [self.cartData removeObjectAtIndex:section];
+        /*2 删除 shopSelectArray*/
+        [self.shopSelectArray removeObjectAtIndex:section];
+        [self.cartTableView reloadData];
+    } else {
+        [self.cartTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
+    }
+    self.cartGoodsCount-=1;
+    
+}
+
+//选中删除
+- (void)deleteGoodsBySelect{
+ 
+    /*1 删除数据*/
+    NSInteger index1 = -1;
+    NSMutableIndexSet *shopSelectIndex = [NSMutableIndexSet indexSet];
+    for (NSMutableArray *shopArray in self.cartData) {
+        index1++;
+        
+        NSInteger index2 = -1;
+        NSMutableIndexSet *selectIndexSet = [NSMutableIndexSet indexSet];
+        for (JSCartModel *model in shopArray) {
+            index2++;
+            if (model.isSelect) {
+                [selectIndexSet addIndex:index2];
+            }
+        }
+        NSInteger shopCount = shopArray.count;
+        NSInteger selectCount = selectIndexSet.count;
+        if (selectCount == shopCount) {
+            [shopSelectIndex addIndex:index1];
+            self.cartGoodsCount-=selectCount;
+        }
+        [shopArray removeObjectsAtIndexes:selectIndexSet];
+    }
+    [self.cartData removeObjectsAtIndexes:shopSelectIndex];
+    /*2 删除 shopSelectArray*/
+    [self.shopSelectArray removeObjectsAtIndexes:shopSelectIndex];
+    [self.cartTableView reloadData];
+    /*3 carbar 恢复默认*/
+    self.allPrices = 0;
 }
 
 @end

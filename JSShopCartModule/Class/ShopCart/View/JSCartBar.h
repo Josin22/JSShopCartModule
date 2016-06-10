@@ -19,6 +19,8 @@
 //删除
 @property (nonatomic, strong) UIButton *deleteButton;
 
-@property (nonatomic, assign) float money;
+@property (nonatomic, assign) BOOL     isNormalState;
+
+@property (nonatomic, assign) float    money;
 
 @end

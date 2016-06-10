@@ -123,11 +123,24 @@ static NSInteger const SelectButtonTag = 122;
     }];
     
     /*  RAC BLIND  */
-    RAC(self.balanceButton,enabled) = [RACSignal combineLatest:@[RACObserve(self.selectAllButton, selected),
-                                                                 RACObserve(self, money)]
-                                                        reduce:^id(NSNumber *isSelect,NSNumber *moeny){
-                                                            return @(isSelect.boolValue||moeny.floatValue>0);
-                                                        }];
+    RACSignal *comBineSignal = [RACSignal combineLatest:@[RACObserve(self, money)]
+                                                 reduce:^id(NSNumber *moeny){
+                                                     if (moeny.floatValue == 0) {
+                                                         self.selectAllButton.selected = NO;
+                                                     }
+                                                     return @(moeny.floatValue>0);
+                                                 }];
+
+    RAC(self.balanceButton,enabled) = comBineSignal;
+    RAC(self.deleteButton,enabled) = comBineSignal;
+    
+    [RACObserve(self, isNormalState) subscribeNext:^(NSNumber *x) {
+        STRONG
+        BOOL isNormal =  x.boolValue;
+        self.balanceButton.hidden = !isNormal;
+        self.allMoneyLabel.hidden = !isNormal;
+        self.deleteButton.hidden = isNormal;
+    }];
 }
 
 
