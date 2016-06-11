@@ -44,7 +44,6 @@
     self.title = @"购物车";
     /*eidit button*/
     _isIdit = NO;
-    
     _makeDataItem = [[UIBarButtonItem alloc] initWithTitle:@"新数据"
                                                                      style:UIBarButtonItemStyleDone
                                                                     target:self
@@ -90,7 +89,6 @@
     [RACObserve(self.viewModel, cartGoodsCount) subscribeNext:^(NSNumber *x) {
        STRONG
         if(x.integerValue == 0){
-            _makeDataItem = nil;
             self.title = [NSString stringWithFormat:@"购物车"];
         } else {
             self.title = [NSString stringWithFormat:@"购物车(%@)",x];
