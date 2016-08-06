@@ -66,11 +66,11 @@ VM:viewmodel主要做处理逻辑和处理数据
 ![image](https://raw.githubusercontent.com/Josin22/JSShopCartModule/master/Source/gig1.gif)
 
 
-更详细的请移步到[我的博客](),谢谢
+更详细的请移步到[我的博客](http://localhost:4000/2016/08/06/20160806/),谢谢
 
-更详细的请移步到[我的博客](),谢谢
+更详细的请移步到[我的博客](http://localhost:4000/2016/08/06/20160806/),谢谢
 
-更详细的请移步到[我的博客](),谢谢
+更详细的请移步到[我的博客](http://localhost:4000/2016/08/06/20160806/),谢谢
 
 ---
 
