@@ -350,14 +350,3 @@ KVC处理model.再次调用getAllPrices方法计算总价
 ## 总结
 主要的方法我都一一讲了很清楚,具体的怎么调用,可以到service里,cell里,控件里看,写了这么一大堆,如果你还有什么不懂,或者有更好的建议请留言,或者到[我的github](https://github.com/Josin22/JSShopCartModule)上issue我,如果我写的对你有些帮助,请给予辛劳的博主一些打赏,谢谢~
 
-=======
-
-更详细的请移步到[我的博客](https://josin22.github.io/2016/08/06/20160806/#more),谢谢
-
-更详细的请移步到[我的博客](https://josin22.github.io/2016/08/06/20160806/#more),谢谢
-
-更详细的请移步到[我的博客](https://josin22.github.io/2016/08/06/20160806/#more),谢谢
->>>>>>> origin/master
-
----
-
