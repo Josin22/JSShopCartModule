@@ -1,10 +1,12 @@
 
+
 # JSShopCartModule
 
 [![GitHub license](https://img.shields.io/badge/platform-ios-green.svg
 )](https://github.com/josin22/JSShopCartModule)
 ![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)
 [![CocoaPods Compatible](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/josin22/JSShopCartModule)
+
 
 # 开始之前你需要了解的
 
@@ -68,6 +70,7 @@ VM:viewmodel主要做处理逻辑和处理数据
 
 ![image](https://raw.githubusercontent.com/Josin22/JSShopCartModule/master/Source/gig1.gif)
 
+<<<<<<< HEAD
 ## 项目搭建框架
 整体文件目录按照模块分一下子文件
 
@@ -347,6 +350,14 @@ KVC处理model.再次调用getAllPrices方法计算总价
 ## 总结
 主要的方法我都一一讲了很清楚,具体的怎么调用,可以到service里,cell里,控件里看,写了这么一大堆,如果你还有什么不懂,或者有更好的建议请留言,或者到[我的github](https://github.com/Josin22/JSShopCartModule)上issue我,如果我写的对你有些帮助,请给予辛劳的博主一些打赏,谢谢~
 
+=======
+
+更详细的请移步到[我的博客](https://josin22.github.io/2016/08/06/20160806/#more),谢谢
+
+更详细的请移步到[我的博客](https://josin22.github.io/2016/08/06/20160806/#more),谢谢
+
+更详细的请移步到[我的博客](https://josin22.github.io/2016/08/06/20160806/#more),谢谢
+>>>>>>> origin/master
 
 ---
 
