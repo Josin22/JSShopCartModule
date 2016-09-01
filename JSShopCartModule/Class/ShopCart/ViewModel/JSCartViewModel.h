@@ -35,6 +35,7 @@
  *  当前所选商品数量
  */
 @property (nonatomic, assign) NSInteger             currentSelectCartGoodsCount;
+
 //获取数据
 - (void)getData;
 
