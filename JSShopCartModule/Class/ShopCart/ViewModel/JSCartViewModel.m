@@ -183,6 +183,15 @@
         [self.shopSelectArray removeObjectAtIndex:section];
         [self.cartTableView reloadData];
     } else {
+        //判断是都到达足够数量
+        NSInteger isSelectShopCount = 0;
+        NSInteger shopCount        = shopArray.count;
+        for (JSCartModel *model in shopArray) {
+            if (model.isSelect) {
+                isSelectShopCount++;
+            }
+        }
+        [self.shopSelectArray replaceObjectAtIndex:section withObject:@(isSelectShopCount==shopCount?YES:NO)];
         [self.cartTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     }
     self.cartGoodsCount-=1;
