@@ -23,7 +23,7 @@
 	use_frameworks!
 	
 	target '你的项目工程名' do
-	  pod 'ReactiveCocoa'
+	   pod 'ReactiveObjC'
 	end
 	
 最后输入命令安装
