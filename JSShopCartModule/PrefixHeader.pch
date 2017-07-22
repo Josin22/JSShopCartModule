@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "ReactiveCocoa.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 /**/
 #define XNWindowWidth ([[UIScreen mainScreen] bounds].size.width)

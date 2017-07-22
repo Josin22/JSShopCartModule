@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E160B5AF41266840C07BC2FD9F454AD"
+               BlueprintIdentifier = "376D59B38C4BE129527125B59934F1E5"
                BuildableName = "Pods_JSShopCartModule.framework"
                BlueprintName = "Pods-JSShopCartModule"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E160B5AF41266840C07BC2FD9F454AD"
+            BlueprintIdentifier = "376D59B38C4BE129527125B59934F1E5"
             BuildableName = "Pods_JSShopCartModule.framework"
             BlueprintName = "Pods-JSShopCartModule"
             ReferencedContainer = "container:Pods.xcodeproj">
